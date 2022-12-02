@@ -1,9 +1,13 @@
 import React from "react";
+import PokedexGrid from "../Components/PokedexGrid";
+import SearchBar from "../Components/SearchBar";
 
 function PokedexPage() {
   return (
-    <div>PokedexPage</div>
-    //
+    <>
+      <SearchBar />
+      <PokedexGrid />
+    </>
   );
 }
 

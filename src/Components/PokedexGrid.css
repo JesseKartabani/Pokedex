@@ -1,0 +1,19 @@
+.pokedexContainer {
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.cardMedia {
+  margin: auto;
+  width: 130px;
+  height: 130px;
+}
+
+.cardContent {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+}
