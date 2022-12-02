@@ -60,8 +60,8 @@ function PokemonStats() {
             <br />
 
             <div>Types:</div>
-            <div>{pokemonStats.types[0].type.name}</div>
-            <div>{pokemonStats.types[1].type.name}</div>
+            <div>{pokemonStats.types[0]?.type.name}</div>
+            <div>{pokemonStats.types[1]?.type.name}</div>
           </div>
         </div>
       )}
