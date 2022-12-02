@@ -19,6 +19,11 @@
   text-align: center;
 }
 
+.cardText {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
 .link {
   text-decoration: none;
 }

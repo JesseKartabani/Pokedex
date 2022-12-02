@@ -49,7 +49,9 @@ function PokedexGrid() {
           <Card>
             <CardMedia className="cardMedia" image={sprite} />
             <CardContent className="cardContent">
-              <Typography>{`${id}. ${capitalizeFirstLetter(name)}`}</Typography>
+              <h1 className="cardText">{`${id}. ${capitalizeFirstLetter(
+                name
+              )}`}</h1>
             </CardContent>
           </Card>
         </Link>
