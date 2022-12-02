@@ -11,12 +11,12 @@ import "./PokedexGrid.css";
 import mockData from "../mockData";
 import { Link } from "react-router-dom";
 
-const PokedexGrid = () => {
+function PokedexGrid() {
   const [pokemonData, setPokemonData] = useState(mockData);
 
-  function capitalizeFirstLetter(string) {
+  const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
-  }
+  };
 
   const getPokemonCard = (pokemonId) => {
     console.log(pokemonData[`${pokemonId}`]);
@@ -50,6 +50,6 @@ const PokedexGrid = () => {
       )}
     </>
   );
-};
+}
 
 export default PokedexGrid;
