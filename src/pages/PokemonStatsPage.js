@@ -1,8 +1,9 @@
 import React from "react";
+import PokemonStats from "../Components/PokemonStats";
 
 function PokemonStatsPage() {
   return (
-    <div>PokemonPage</div>
+    <PokemonStats />
     //
   );
 }

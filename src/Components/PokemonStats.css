@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemonName {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5rem;
+  margin-bottom: -10px;
+}
+
+.infoHeading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+
+.pokemonImage {
+  width: 300px;
+  height: 300px;
+}
+
+.pokemonInfo {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  padding: 10px;
+  background-color: aliceblue;
+  border-style: solid;
+  border-color: black;
+}
