@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import "./PokemonStats.css";
 import { CircularProgress } from "@mui/material";
@@ -65,6 +65,12 @@ function PokemonStats() {
           </div>
         </div>
       )}
+
+      <div className="container">
+        <Link className="pokedexLink" to={"/"}>
+          BACK TO POKEDEX
+        </Link>
+      </div>
     </>
   );
 }

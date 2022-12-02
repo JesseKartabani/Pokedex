@@ -27,7 +27,7 @@
 .pokemonInfo {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2rem;
-  padding: 10px;
+  padding: 15px;
   background-color: aliceblue;
   border-style: solid;
   border-color: rgb(0, 0, 0);
@@ -39,4 +39,17 @@
   position: absolute;
   top: 50%;
   left: 50%;
+}
+
+.pokedexLink {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  color: black;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  background-color: aliceblue;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 15px;
 }
