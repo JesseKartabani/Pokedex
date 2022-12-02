@@ -44,7 +44,7 @@
 .pokedexLink {
   text-decoration: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
   border-style: solid;
   border-color: rgb(0, 0, 0);
@@ -52,4 +52,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 15px;
+}
+
+.pokedexLink:hover {
+  transform: scale(1.08);
+  opacity: 1;
 }

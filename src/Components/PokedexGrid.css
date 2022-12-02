@@ -10,6 +10,11 @@
   height: 130px;
 }
 
+.cardMedia:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
 .cardContent {
   text-align: center;
 }
