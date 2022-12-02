@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -8,20 +8,40 @@ import {
   Typography,
 } from "@mui/material";
 import "./PokedexGrid.css";
-import mockData from "../mockData";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function PokedexGrid() {
-  const [pokemonData, setPokemonData] = useState(mockData);
+  const [pokemonData, setPokemonData] = useState({});
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
-  const getPokemonCard = (pokemonId) => {
-    console.log(pokemonData[`${pokemonId}`]);
-    const { id, name } = pokemonData[`${pokemonId}`];
-    const sprite = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`;
+  // Returns id, name, and sprite for 800 pokemon
+  useEffect(() => {
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon?limit=800")
+      .then(function (response) {
+        const { data } = response;
+        const { results } = data;
+        const newPokemonData = {};
+        results.forEach((pokemon, index) => {
+          newPokemonData[index + 1] = {
+            id: index + 1,
+            name: pokemon.name,
+            sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+              index + 1
+            }.png`,
+          };
+        });
+        setPokemonData(newPokemonData);
+      });
+  }, []);
+
+  // Indivdual pokemon cards
+  const MakePokemonCard = (pokemonId) => {
+    const { id, name, sprite } = pokemonData[pokemonId];
 
     return (
       <Grid item xs={12} sm={4} key={pokemonId}>
@@ -40,12 +60,14 @@ function PokedexGrid() {
   return (
     <>
       {pokemonData ? (
+        // Call make pokemon card for every pokemon id we have
         <Grid container spacing={2} className="pokedexContainer">
           {Object.keys(pokemonData).map((pokemonId) =>
-            getPokemonCard(pokemonId)
+            MakePokemonCard(pokemonId)
           )}
         </Grid>
       ) : (
+        // Loading circle if we dont have pokemon data
         <CircularProgress />
       )}
     </>
