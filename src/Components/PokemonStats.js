@@ -11,13 +11,12 @@ function PokemonStats() {
 
   // get pokemon stats using page id
   const fetchPokemonData = async () => {
-    console.log(params.pokemonId);
     const response =
       await axios.get(`https://pokeapi.co/api/v2/pokemon/${params.pokemonId}
     `);
     const pokemon = response.data;
+    console.log(pokemon);
     setPokemonStats(pokemon);
-    console.log(pokemonStats.data);
   };
 
   const capitalizeFirstLetter = (string) => {
