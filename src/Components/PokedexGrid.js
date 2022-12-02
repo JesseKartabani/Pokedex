@@ -68,7 +68,9 @@ function PokedexGrid() {
         </Grid>
       ) : (
         // Loading circle if we dont have pokemon data
-        <CircularProgress />
+        <div className="circularProgress">
+          <CircularProgress />
+        </div>
       )}
     </>
   );

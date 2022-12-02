@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./PokemonStats.css";
+import { CircularProgress } from "@mui/material";
 
 function PokemonStats() {
   const [pokemonStats, setPokemonStats] = useState([]);
@@ -29,6 +30,12 @@ function PokemonStats() {
 
   return (
     <>
+      {pokemonStats.name === undefined && (
+        <div className="circularProgress">
+          <CircularProgress />
+        </div>
+      )}
+
       {pokemonStats.name && (
         <div className="container">
           <h1 className="pokemonName">
