@@ -3,8 +3,9 @@ import PokemonStats from "../Components/PokemonStats";
 
 function PokemonStatsPage() {
   return (
-    <PokemonStats />
-    //
+    <>
+      <PokemonStats />
+    </>
   );
 }
 
