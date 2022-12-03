@@ -56,8 +56,9 @@ function PokemonStats() {
               Species: {capitalizeFirstLetter(pokemonData.species.name)}
             </div>
 
-            <div>Height: {pokemonData.height}</div>
-            <div>Weight: {pokemonData.weight}</div>
+            {/* Weight is in hectograms and height is in decimeters */}
+            <div>Height: {pokemonData.height / 10}m</div>
+            <div>Weight: {pokemonData.weight / 10}kg</div>
             <br />
 
             <div>Types:</div>
