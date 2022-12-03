@@ -87,6 +87,11 @@ function PokedexGrid() {
               variant="standard"
             />
           </div>
+          <img
+            className="pokemonLogo"
+            src={require("../assets/pokedexLogo.png")}
+            alt="Logo"
+          />
         </Toolbar>
       </AppBar>
 

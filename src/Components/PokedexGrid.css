@@ -48,11 +48,17 @@
 }
 
 .searchInput {
-  width: 200px;
   margin: 5px;
   color: white;
 }
 
 .spacer {
   height: 60px;
+}
+
+.pokemonLogo {
+  width: 110px;
+  height: 40px;
+  align-self: flex-end;
+  margin-bottom: 5px;
 }
