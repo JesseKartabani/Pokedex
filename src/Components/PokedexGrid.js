@@ -5,7 +5,6 @@ import {
   CircularProgress,
   Grid,
   CardMedia,
-  Typography,
   AppBar,
   Toolbar,
   TextField,
