@@ -55,11 +55,16 @@
 }
 
 .spacer {
-  height: 85px;
+  height: 90px;
 }
 
 .pokemonLogo {
   width: 180px;
   height: 70px;
   margin-left: -10px;
+}
+
+.toolBar {
+  border-bottom: 2px solid;
+  border-color: rgb(0, 0, 0);
 }

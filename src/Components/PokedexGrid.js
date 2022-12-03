@@ -71,7 +71,7 @@ function PokedexGrid() {
     <>
       {/* Search bar */}
       <AppBar position="fixed">
-        <Toolbar>
+        <Toolbar className="toolBar">
           <div className="searchContainer">
             <img
               className="pokemonLogo"
