@@ -54,7 +54,7 @@ function PokedexGrid() {
     return (
       <Grid item xs={12} sm={4} key={pokemonId}>
         <Link className="link" to={`/${pokemonId}`}>
-          <Card>
+          <Card className="card">
             <CardMedia className="cardMedia" image={sprite} />
             <CardContent className="cardContent">
               <h1 className="cardText">{`${id}. ${capitalizeFirstLetter(
