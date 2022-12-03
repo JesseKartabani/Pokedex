@@ -45,10 +45,14 @@
 
 .searchIcon {
   align-self: flex-end;
-  margin-bottom: 5px;
 }
 
 .searchInput {
   width: 200px;
   margin: 5px;
+  color: white;
+}
+
+.spacer {
+  height: 60px;
 }

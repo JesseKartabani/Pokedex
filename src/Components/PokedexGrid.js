@@ -70,19 +70,27 @@ function PokedexGrid() {
   return (
     <>
       {/* Search bar */}
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <div className="searchContainer">
-            <SearchIcon className="searchIcon" />
+            <SearchIcon className="searchIcon" fontSize="large" />
             <TextField
+              InputProps={{
+                style: { color: "white" },
+              }}
+              InputLabelProps={{
+                style: { color: "white", fontSize: "large" },
+              }}
               onChange={handleSearchChange}
               className="searchInput"
-              label="Pokemon"
+              label="Search"
               variant="standard"
             />
           </div>
         </Toolbar>
       </AppBar>
+
+      <div className="spacer"></div>
 
       {pokemonData ? (
         // Call make pokemon card for every pokemon id we have
