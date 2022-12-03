@@ -70,14 +70,12 @@ function PokemonStats() {
             <div>S.Def: {pokemonData.stats[4].base_stat}</div>
             <div>Spd: {pokemonData.stats[5].base_stat}</div>
           </div>
+
+          <Link className="pokedexLink" to={"/"}>
+            BACK TO POKEDEX
+          </Link>
         </div>
       )}
-
-      <div className="container">
-        <Link className="pokedexLink" to={"/"}>
-          BACK TO POKEDEX
-        </Link>
-      </div>
     </div>
   );
 }
