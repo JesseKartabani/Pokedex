@@ -1,6 +1,6 @@
 .pokemonBackground {
   background-image: linear-gradient(to bottom, #87ceeb, #3c5aa6);
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
@@ -49,7 +49,7 @@
   border-color: #3c5aa6;
   background-color: aliceblue;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 250px;
   padding: 15px;
 }
 

@@ -60,6 +60,15 @@ function PokemonStats() {
             <div>Types:</div>
             <div>{capitalizeFirstLetter(pokemonData.types[0]?.type.name)}</div>
             <div>{capitalizeFirstLetter(pokemonData.types[1]?.type.name)}</div>
+            <br />
+
+            <div>Stats:</div>
+            <div>Hp: {pokemonData.stats[0].base_stat}</div>
+            <div>Atk: {pokemonData.stats[1].base_stat}</div>
+            <div>Def: {pokemonData.stats[2].base_stat}</div>
+            <div>S.Atk: {pokemonData.stats[3].base_stat}</div>
+            <div>S.Def: {pokemonData.stats[4].base_stat}</div>
+            <div>Spd: {pokemonData.stats[5].base_stat}</div>
           </div>
         </div>
       )}
