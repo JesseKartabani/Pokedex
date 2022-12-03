@@ -34,3 +34,21 @@
   top: 50%;
   left: 50%;
 }
+
+.searchContainer {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.searchIcon {
+  align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.searchInput {
+  width: 200px;
+  margin: 5px;
+}

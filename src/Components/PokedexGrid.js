@@ -6,16 +6,25 @@ import {
   Grid,
   CardMedia,
   Typography,
+  AppBar,
+  Toolbar,
+  TextField,
 } from "@mui/material";
 import "./PokedexGrid.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import SearchIcon from "@mui/icons-material/Search";
 
 function PokedexGrid() {
+  const [filter, setFilter] = useState("");
   const [pokemonData, setPokemonData] = useState({});
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const handleSearchChange = (e) => {
+    setFilter(e.target.value);
   };
 
   // Returns id, name, and sprite for 800 pokemon
@@ -23,8 +32,7 @@ function PokedexGrid() {
     axios
       .get("https://pokeapi.co/api/v2/pokemon?limit=800")
       .then(function (response) {
-        const { data } = response;
-        const { results } = data;
+        const results = response.data.results;
         const newPokemonData = {};
         results.forEach((pokemon, index) => {
           newPokemonData[index + 1] = {
@@ -61,11 +69,29 @@ function PokedexGrid() {
 
   return (
     <>
+      {/* Search bar */}
+      <AppBar position="static">
+        <Toolbar>
+          <div className="searchContainer">
+            <SearchIcon className="searchIcon" />
+            <TextField
+              onChange={handleSearchChange}
+              className="searchInput"
+              label="Pokemon"
+              variant="standard"
+            />
+          </div>
+        </Toolbar>
+      </AppBar>
+
       {pokemonData ? (
         // Call make pokemon card for every pokemon id we have
         <Grid container spacing={2} className="pokedexContainer">
-          {Object.keys(pokemonData).map((pokemonId) =>
-            MakePokemonCard(pokemonId)
+          {Object.keys(pokemonData).map(
+            (pokemonId) =>
+              // If we have search input only render pokemon matching the search
+              pokemonData[pokemonId].name.includes(filter) &&
+              MakePokemonCard(pokemonId)
           )}
         </Grid>
       ) : (
