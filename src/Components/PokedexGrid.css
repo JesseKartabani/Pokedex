@@ -10,9 +10,23 @@
   height: 130px;
 }
 
-.cardMedia:hover {
-  transform: scale(1.3);
+.card {
+  border: 2px solid;
+  border-color: #3c5aa6;
+}
+
+.card:hover {
+  transform: scale(1.02);
   opacity: 1;
+}
+
+.card:hover .cardMedia {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.card:active {
+  background-color: gray;
 }
 
 .cardContent {
@@ -65,10 +79,5 @@
 
 .toolBar {
   border-bottom: 2px solid;
-  border-color: #3c5aa6;
-}
-
-.card {
-  border: 2px solid;
   border-color: #3c5aa6;
 }

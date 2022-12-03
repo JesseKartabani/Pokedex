@@ -38,7 +38,6 @@
 
 .pokedexLink {
   text-decoration: none;
-
   font-size: 1.5rem;
   color: black;
   border-style: solid;
@@ -52,4 +51,8 @@
 .pokedexLink:hover {
   transform: scale(1.08);
   opacity: 1;
+}
+
+.pokedexLink:active {
+  background-color: gray;
 }
