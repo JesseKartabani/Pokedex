@@ -97,7 +97,12 @@ function PokedexGrid() {
 
       <div className="spacer"></div>
 
-      {pokemonData ? (
+      {pokemonData[1] === undefined && (
+        // Loading circle if we dont have pokemon data
+        <CircularProgress className="circularProgress" />
+      )}
+
+      {pokemonData && (
         // Call make pokemon card for every pokemon id we have
         <Grid container spacing={2} className="pokedexContainer">
           {Object.keys(pokemonData).map(
@@ -107,11 +112,6 @@ function PokedexGrid() {
               MakePokemonCard(pokemonId)
           )}
         </Grid>
-      ) : (
-        // Loading circle if we dont have pokemon data
-        <div className="circularProgress">
-          <CircularProgress />
-        </div>
       )}
     </>
   );
