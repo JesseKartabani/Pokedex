@@ -67,7 +67,7 @@ function PokedexGrid() {
   };
 
   return (
-    <div className="pokedexBackground">
+    <>
       {/* Search bar */}
       <AppBar position="fixed">
         <Toolbar className="toolBar">
@@ -113,7 +113,7 @@ function PokedexGrid() {
           <CircularProgress />
         </div>
       )}
-    </div>
+    </>
   );
 }
 
