@@ -23,7 +23,7 @@ function PokedexGrid() {
   };
 
   const handleSearchChange = (e) => {
-    setFilter(e.target.value);
+    setFilter(e.target.value.toLowerCase());
   };
 
   // Returns id, name, and sprite for 800 pokemon
