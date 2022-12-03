@@ -5,7 +5,7 @@ import "./PokemonStats.css";
 import { CircularProgress } from "@mui/material";
 
 function PokemonStats() {
-  const [pokemonStats, setPokemonStats] = useState([]);
+  const [pokemonData, setpokemonData] = useState([]);
 
   // id of page we are on
   const params = useParams();
@@ -17,7 +17,7 @@ function PokemonStats() {
     `);
     const pokemon = response.data;
     console.log(pokemon);
-    setPokemonStats(pokemon);
+    setpokemonData(pokemon);
   };
 
   const capitalizeFirstLetter = (string) => {
@@ -31,21 +31,21 @@ function PokemonStats() {
 
   return (
     <>
-      {pokemonStats.name === undefined && (
+      {pokemonData.name === undefined && (
         <div className="circularProgress">
           <CircularProgress />
         </div>
       )}
 
-      {pokemonStats.name && (
+      {pokemonData.name && (
         <div className="container">
           <h1 className="pokemonName">
-            {capitalizeFirstLetter(pokemonStats.name)}
+            {capitalizeFirstLetter(pokemonData.name)}
           </h1>
 
           <img
             className="pokemonImage"
-            src={pokemonStats.sprites.front_default}
+            src={pokemonData.sprites.front_default}
             alt="Pokemon"
           />
 
@@ -53,16 +53,16 @@ function PokemonStats() {
 
           <div className="pokemonInfo">
             <div>
-              Species: {capitalizeFirstLetter(pokemonStats.species.name)}
+              Species: {capitalizeFirstLetter(pokemonData.species.name)}
             </div>
 
-            <div>Height: {pokemonStats.height}</div>
-            <div>Weight: {pokemonStats.weight}</div>
+            <div>Height: {pokemonData.height}</div>
+            <div>Weight: {pokemonData.weight}</div>
             <br />
 
             <div>Types:</div>
-            <div>{capitalizeFirstLetter(pokemonStats.types[0]?.type.name)}</div>
-            <div>{capitalizeFirstLetter(pokemonStats.types[1]?.type.name)}</div>
+            <div>{capitalizeFirstLetter(pokemonData.types[0]?.type.name)}</div>
+            <div>{capitalizeFirstLetter(pokemonData.types[1]?.type.name)}</div>
           </div>
         </div>
       )}
