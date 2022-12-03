@@ -8,7 +8,6 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 4.2rem;
   margin-bottom: -10px;
-  text-shadow: -2px -2px white;
 }
 
 .infoHeading {
@@ -16,7 +15,6 @@
   font-size: 3.2rem;
   margin-bottom: 5px;
   margin-top: -10px;
-  text-shadow: -2px -2px white;
 }
 
 .pokemonImage {
@@ -30,8 +28,8 @@
   padding: 15px;
   background-color: aliceblue;
   border-style: solid;
-  border-color: rgb(0, 0, 0);
-  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
+  border-color: #3c5aa6;
+  box-shadow: -3px 3px #3c5aa6, -2px 2px #3c5aa6, -1px 1px #3c5aa6;
 }
 
 .circularProgress {
@@ -47,7 +45,7 @@
   font-size: 1.5rem;
   color: black;
   border-style: solid;
-  border-color: rgb(0, 0, 0);
+  border-color: #3c5aa6;
   background-color: aliceblue;
   margin-top: 50px;
   margin-bottom: 50px;
