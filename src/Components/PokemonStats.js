@@ -21,6 +21,7 @@ function PokemonStats() {
   };
 
   const capitalizeFirstLetter = (string) => {
+    if (string === undefined) return;
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
@@ -60,8 +61,8 @@ function PokemonStats() {
             <br />
 
             <div>Types:</div>
-            <div>{pokemonStats.types[0]?.type.name}</div>
-            <div>{pokemonStats.types[1]?.type.name}</div>
+            <div>{capitalizeFirstLetter(pokemonStats.types[0]?.type.name)}</div>
+            <div>{capitalizeFirstLetter(pokemonStats.types[1]?.type.name)}</div>
           </div>
         </div>
       )}
