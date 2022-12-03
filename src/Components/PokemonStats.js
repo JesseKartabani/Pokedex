@@ -30,7 +30,7 @@ function PokemonStats() {
   }, []);
 
   return (
-    <>
+    <div className="pokemonBackground">
       {pokemonData.name === undefined && (
         <div className="circularProgress">
           <CircularProgress />
@@ -72,7 +72,7 @@ function PokemonStats() {
           BACK TO POKEDEX
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 
