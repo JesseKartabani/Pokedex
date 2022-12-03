@@ -41,10 +41,12 @@
   padding-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
+  height: 80px;
+  align-items: center;
 }
 
 .searchIcon {
-  align-self: flex-end;
+  margin-top: 15px;
 }
 
 .searchInput {
@@ -53,12 +55,11 @@
 }
 
 .spacer {
-  height: 60px;
+  height: 85px;
 }
 
 .pokemonLogo {
-  width: 110px;
-  height: 40px;
-  align-self: flex-end;
-  margin-bottom: 5px;
+  width: 180px;
+  height: 70px;
+  margin-left: -10px;
 }

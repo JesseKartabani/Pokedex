@@ -73,13 +73,19 @@ function PokedexGrid() {
       <AppBar position="fixed">
         <Toolbar>
           <div className="searchContainer">
+            <img
+              className="pokemonLogo"
+              src={require("../assets/pokedexLogo.png")}
+              alt="Logo"
+            />
+
             <SearchIcon className="searchIcon" fontSize="large" />
             <TextField
               InputProps={{
                 style: { color: "white" },
               }}
               InputLabelProps={{
-                style: { color: "white", fontSize: "large" },
+                style: { color: "white", fontSize: "20px" },
               }}
               onChange={handleSearchChange}
               className="searchInput"
@@ -87,11 +93,6 @@ function PokedexGrid() {
               variant="standard"
             />
           </div>
-          <img
-            className="pokemonLogo"
-            src={require("../assets/pokedexLogo.png")}
-            alt="Logo"
-          />
         </Toolbar>
       </AppBar>
 
