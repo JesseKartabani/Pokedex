@@ -31,10 +31,12 @@ function PokemonStats() {
 
   return (
     <div className="pokemonBackground">
+      {/* Display loading screen until we have pokemon data */}
       {pokemonData.name === undefined && (
         <CircularProgress className="circularProgress" />
       )}
 
+      {/* Once we have pokemon data display name, img, and info */}
       {pokemonData.name && (
         <div className="container">
           <h1 className="pokemonName">
@@ -69,6 +71,7 @@ function PokemonStats() {
             <div>Spd: {pokemonData.stats[5].base_stat}</div>
           </div>
 
+          {/* Returns to home page */}
           <Link className="pokedexLink" to={"/"}>
             BACK TO POKEDEX
           </Link>

@@ -15,6 +15,7 @@ import axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
 
 function PokedexGrid() {
+  // Filter is users search input
   const [filter, setFilter] = useState("");
   const [pokemonData, setPokemonData] = useState({});
 
@@ -22,6 +23,7 @@ function PokedexGrid() {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
+  // Saves user search input to state
   const handleSearchChange = (e) => {
     setFilter(e.target.value.toLowerCase());
   };
@@ -46,7 +48,7 @@ function PokedexGrid() {
       });
   }, []);
 
-  // Indivdual pokemon cards
+  // Indivdual pokemon card layout
   const MakePokemonCard = (pokemonId) => {
     const { id, name, sprite } = pokemonData[pokemonId];
 
@@ -68,16 +70,18 @@ function PokedexGrid() {
 
   return (
     <>
-      {/* Search bar */}
+      {/* Banner */}
       <AppBar position="fixed">
         <Toolbar className="toolBar">
           <div className="searchContainer">
+            {/* Logo */}
             <img
               className="pokemonLogo"
               src={require("../assets/pokedexLogo.png")}
               alt="Logo"
             />
 
+            {/* Search bar */}
             <SearchIcon className="searchIcon" fontSize="large" />
             <TextField
               InputProps={{
@@ -97,11 +101,12 @@ function PokedexGrid() {
 
       <div className="spacer"></div>
 
+      {/* Display loading screen until we have pokemon data */}
       {pokemonData[1] === undefined && (
-        // Loading circle if we dont have pokemon data
         <CircularProgress className="circularProgress" />
       )}
 
+      {/* Once we have pokemon data */}
       {pokemonData && (
         // Call make pokemon card for every pokemon id we have
         <Grid container spacing={2} className="pokedexContainer">
