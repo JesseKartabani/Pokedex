@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import "./PokemonStats.css";
 import { CircularProgress } from "@mui/material";
+import "animate.css";
 
 function PokemonStats() {
   const [pokemonData, setpokemonData] = useState([]);
@@ -39,7 +40,7 @@ function PokemonStats() {
       {/* Once we have pokemon data display name, img, and info */}
       {pokemonData.name && (
         <div className="container">
-          <h1 className="pokemonName">
+          <h1 className="pokemonName animate__animated animate__fadeInDown">
             {capitalizeFirstLetter(pokemonData.name)}
           </h1>
 
@@ -49,9 +50,11 @@ function PokemonStats() {
             alt="Pokemon"
           />
 
-          <h2 className="infoHeading">Info</h2>
+          <h2 className="infoHeading animate__animated animate__fadeInLeft">
+            Info
+          </h2>
 
-          <div className="pokemonInfo">
+          <div className="pokemonInfo animate__animated animate__fadeInLeft">
             {/* Weight is in hectograms and height is in decimeters */}
             <div>Height: {pokemonData.height / 10}m</div>
             <div>Weight: {pokemonData.weight / 10}kg</div>
@@ -72,7 +75,10 @@ function PokemonStats() {
           </div>
 
           {/* Returns to home page */}
-          <Link className="pokedexLink" to={"/"}>
+          <Link
+            className="pokedexLink animate__animated animate__fadeInRight"
+            to={"/"}
+          >
             BACK TO POKEDEX
           </Link>
         </div>
