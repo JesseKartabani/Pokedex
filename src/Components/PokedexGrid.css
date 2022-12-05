@@ -17,16 +17,14 @@
 
 .card:hover {
   transform: scale(1.02);
-  opacity: 1;
 }
 
 .card:hover .cardMedia {
   transform: scale(1.2);
-  opacity: 1;
 }
 
 .card:active {
-  opacity: 0.7;
+  background-color: gray;
 }
 
 .cardContent {

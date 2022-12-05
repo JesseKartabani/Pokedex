@@ -55,9 +55,8 @@
 
 .pokedexLink:hover {
   transform: scale(1.08);
-  opacity: 1;
 }
 
 .pokedexLink:active {
-  opacity: 0.7;
+  background-color: gray;
 }
