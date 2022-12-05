@@ -75,10 +75,7 @@ function PokemonStats() {
           </div>
 
           {/* Returns to home page */}
-          <Link
-            className="pokedexLink animate__animated animate__fadeInRight"
-            to={"/"}
-          >
+          <Link className="pokedexLink" to={"/"}>
             BACK TO POKEDEX
           </Link>
         </div>
