@@ -13,6 +13,7 @@ import "./PokedexGrid.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import SearchIcon from "@mui/icons-material/Search";
+import "animate.css";
 
 function PokedexGrid() {
   // Filter is users search input
@@ -55,7 +56,7 @@ function PokedexGrid() {
     return (
       <Grid item xs={12} sm={4} key={pokemonId}>
         <Link className="link" to={`/${pokemonId}`}>
-          <Card className="card">
+          <Card className="card animate__animated animate__fadeIn">
             <CardMedia className="cardMedia" image={sprite} />
             <CardContent className="cardContent">
               <h1 className="cardText">{`${id}. ${capitalizeFirstLetter(
@@ -73,28 +74,30 @@ function PokedexGrid() {
       {/* Banner */}
       <AppBar position="fixed">
         <Toolbar className="toolBar">
-          <div className="searchContainer">
+          <div className="searchContainer ">
             {/* Logo */}
             <img
-              className="pokemonLogo"
+              className="pokemonLogo animate__animated animate__fadeInLeft"
               src={require("../assets/pokedexLogo.png")}
               alt="Logo"
             />
 
             {/* Search bar */}
-            <SearchIcon className="searchIcon" fontSize="large" />
-            <TextField
-              InputProps={{
-                style: { color: "white" },
-              }}
-              InputLabelProps={{
-                style: { color: "white", fontSize: "20px" },
-              }}
-              onChange={handleSearchChange}
-              className="searchInput"
-              label="Search"
-              variant="standard"
-            />
+            <div className="animate__animated animate__fadeInRight">
+              <SearchIcon className="searchIcon" fontSize="large" />
+              <TextField
+                InputProps={{
+                  style: { color: "white" },
+                }}
+                InputLabelProps={{
+                  style: { color: "white", fontSize: "20px" },
+                }}
+                onChange={handleSearchChange}
+                className="searchInput"
+                label="Search"
+                variant="standard"
+              />
+            </div>
           </div>
         </Toolbar>
       </AppBar>
