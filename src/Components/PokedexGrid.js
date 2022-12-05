@@ -53,9 +53,15 @@ function PokedexGrid() {
     const { id, name, sprite } = pokemonData[pokemonId];
 
     return (
-      <Grid item xs={12} sm={4} key={pokemonId}>
+      <Grid
+        className="animate__animated animate__fadeInUp"
+        item
+        xs={12}
+        sm={4}
+        key={pokemonId}
+      >
         <Link className="link" to={`/${pokemonId}`}>
-          <Card className="card animate__animated animate__fadeInUp">
+          <Card className="card">
             <CardMedia className="cardMedia" image={sprite} />
             <CardContent className="cardContent">
               <h1 className="cardText">{`${id}. ${capitalizeFirstLetter(
