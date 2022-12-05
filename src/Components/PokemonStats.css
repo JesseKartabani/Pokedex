@@ -10,14 +10,20 @@
 }
 
 .pokemonName {
-  color: aliceblue;
+  color: white;
   font-size: 4.2rem;
   margin-bottom: -10px;
+  font-weight: bolder;
+}
+
+.subHeading {
+  font-weight: bold;
 }
 
 .infoHeading {
-  color: aliceblue;
+  color: white;
   font-size: 3.2rem;
+  font-weight: bolder;
   margin-bottom: 5px;
   margin-top: -10px;
 }

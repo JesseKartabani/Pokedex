@@ -56,16 +56,20 @@ function PokemonStats() {
 
           <div className="pokemonInfo animate__animated animate__fadeInLeft">
             {/* Weight is in hectograms and height is in decimeters */}
-            <div>Height: {pokemonData.height / 10}m</div>
-            <div>Weight: {pokemonData.weight / 10}kg</div>
+            <div className="subHeading">Height: </div>
+            <div>{pokemonData.height / 10}m</div>
             <br />
 
-            <div>Types:</div>
+            <div className="subHeading">Weight:</div>
+            <div>{pokemonData.weight / 10}m</div>
+            <br />
+
+            <div className="subHeading">Types:</div>
             <div>{capitalizeFirstLetter(pokemonData.types[0]?.type.name)}</div>
             <div>{capitalizeFirstLetter(pokemonData.types[1]?.type.name)}</div>
             <br />
 
-            <div>Stats:</div>
+            <div className="subHeading">Stats:</div>
             <div>Hp: &emsp; {pokemonData.stats[0].base_stat}</div>
             <div>Atk: &emsp;{pokemonData.stats[1].base_stat}</div>
             <div>Def: &emsp;{pokemonData.stats[2].base_stat}</div>
