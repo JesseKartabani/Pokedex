@@ -52,7 +52,6 @@
   padding-right: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
-  height: 80px;
   align-items: center;
 }
 
@@ -61,22 +60,24 @@
 }
 
 .searchInput {
-  margin: 5px;
   color: white;
 }
 
 .spacer {
-  height: 90px;
+  height: 100px;
 }
 
 .pokemonLogo {
-  width: 180px;
-  height: 70px;
-  margin-left: -10px;
+  max-width: 40%;
+  height: auto;
 }
 
 .toolBar {
   background-image: linear-gradient(to right, #3c5aa6, #6ec8eb);
   border-bottom: 2px solid;
   border-color: #3c5aa6;
+}
+
+.searchContainer {
+  flex-direction: row;
 }
