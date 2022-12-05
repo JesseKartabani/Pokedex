@@ -1,5 +1,5 @@
 .pokemonBackground {
-  background-image: linear-gradient(to bottom, #87ceeb, #3c5aa6);
+  background-image: linear-gradient(to bottom, #3c5aa6, #87ceeb);
   height: 100%;
 }
 
@@ -10,11 +10,13 @@
 }
 
 .pokemonName {
+  color: aliceblue;
   font-size: 4.2rem;
   margin-bottom: -10px;
 }
 
 .infoHeading {
+  color: aliceblue;
   font-size: 3.2rem;
   margin-bottom: 5px;
   margin-top: -10px;
@@ -49,7 +51,7 @@
   border-color: #3c5aa6;
   background-color: aliceblue;
   margin-top: 50px;
-  margin-bottom: 250px;
+  margin-bottom: 50px;
   padding: 15px;
 }
 
