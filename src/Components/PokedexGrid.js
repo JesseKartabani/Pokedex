@@ -90,12 +90,12 @@ function PokedexGrid() {
                   style: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white", fontSize: "2.5vh" },
+                  style: { color: "white", fontSize: "1.5rem" },
                 }}
                 onChange={handleSearchChange}
                 className="searchInput"
                 label="Search"
-                variant="standard"
+                variant="filled"
               />
             </div>
           </div>
