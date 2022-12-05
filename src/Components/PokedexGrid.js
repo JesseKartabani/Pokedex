@@ -56,7 +56,7 @@ function PokedexGrid() {
     return (
       <Grid item xs={12} sm={4} key={pokemonId}>
         <Link className="link" to={`/${pokemonId}`}>
-          <Card className="card animate__animated animate__fadeIn">
+          <Card className="card animate__animated animate__fadeInUp">
             <CardMedia className="cardMedia" image={sprite} />
             <CardContent className="cardContent">
               <h1 className="cardText">{`${id}. ${capitalizeFirstLetter(
@@ -77,13 +77,13 @@ function PokedexGrid() {
           <div className="searchContainer ">
             {/* Logo */}
             <img
-              className="pokemonLogo animate__animated animate__fadeIn"
+              className="pokemonLogo animate__animated animate__fadeInLeft"
               src={require("../assets/pokedexLogo.png")}
               alt="Logo"
             />
 
             {/* Search bar */}
-            <div className="searchContainer animate__animated animate__fadeInRight animate__faster">
+            <div className="searchContainer animate__animated animate__fadeInRight">
               <SearchIcon className="searchIcon" fontSize="large" />
               <TextField
                 InputProps={{
