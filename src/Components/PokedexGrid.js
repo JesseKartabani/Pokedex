@@ -16,8 +16,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import "animate.css";
 
 function PokedexGrid() {
-  // Filter is users search input
-  const [filter, setFilter] = useState("");
+  const [searchInput, setSearchInput] = useState("");
   const [pokemonData, setPokemonData] = useState({});
 
   const capitalizeFirstLetter = (string) => {
@@ -26,7 +25,7 @@ function PokedexGrid() {
 
   // Saves user search input to state
   const handleSearchChange = (e) => {
-    setFilter(e.target.value.toLowerCase());
+    setSearchInput(e.target.value.toLowerCase());
   };
 
   // Returns id, name, and sprite for 800 pokemon
@@ -114,7 +113,7 @@ function PokedexGrid() {
           {Object.keys(pokemonData).map(
             (pokemonId) =>
               // If we have search input only render pokemon matching the search
-              pokemonData[pokemonId].name.includes(filter) &&
+              pokemonData[pokemonId].name.includes(searchInput) &&
               MakePokemonCard(pokemonId)
           )}
         </Grid>
