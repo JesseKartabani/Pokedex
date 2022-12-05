@@ -8,6 +8,7 @@
   margin: auto;
   width: 130px;
   height: 130px;
+  margin-top: 10px;
 }
 
 .card {
@@ -31,6 +32,7 @@
 
 .cardContent {
   text-align: center;
+  margin-bottom: -10px;
 }
 
 .cardText {
