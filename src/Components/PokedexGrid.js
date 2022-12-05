@@ -77,7 +77,7 @@ function PokedexGrid() {
           <div className="searchContainer ">
             {/* Logo */}
             <img
-              className="pokemonLogo animate__animated animate__fadeInLeft"
+              className="pokemonLogo animate__animated animate__fadeIn"
               src={require("../assets/pokedexLogo.png")}
               alt="Logo"
             />
