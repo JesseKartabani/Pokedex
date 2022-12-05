@@ -90,7 +90,7 @@ function PokedexGrid() {
                   style: { color: "white" },
                 }}
                 InputLabelProps={{
-                  style: { color: "white", fontSize: "20px" },
+                  style: { color: "white", fontSize: "2.5vh" },
                 }}
                 onChange={handleSearchChange}
                 className="searchInput"
@@ -101,8 +101,6 @@ function PokedexGrid() {
           </div>
         </Toolbar>
       </AppBar>
-
-      <div className="spacer"></div>
 
       {/* Display loading screen until we have pokemon data */}
       {pokemonData[1] === undefined && (
