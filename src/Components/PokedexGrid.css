@@ -16,11 +16,15 @@
 }
 
 .card:hover {
+  transition: transform 450ms;
   transform: scale(1.02);
+  opacity: 1;
 }
 
 .card:hover .cardMedia {
+  transition: transform 450ms;
   transform: scale(1.2);
+  opacity: 1;
 }
 
 .card:active {
