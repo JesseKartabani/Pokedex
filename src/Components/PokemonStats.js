@@ -66,12 +66,12 @@ function PokemonStats() {
             <br />
 
             <div>Stats:</div>
-            <div>Hp: {pokemonData.stats[0].base_stat}</div>
-            <div>Atk: {pokemonData.stats[1].base_stat}</div>
-            <div>Def: {pokemonData.stats[2].base_stat}</div>
-            <div>S.Atk: {pokemonData.stats[3].base_stat}</div>
-            <div>S.Def: {pokemonData.stats[4].base_stat}</div>
-            <div>Spd: {pokemonData.stats[5].base_stat}</div>
+            <div>Hp: &emsp; {pokemonData.stats[0].base_stat}</div>
+            <div>Atk: &emsp;{pokemonData.stats[1].base_stat}</div>
+            <div>Def: &emsp;{pokemonData.stats[2].base_stat}</div>
+            <div>S.Atk: &nbsp;{pokemonData.stats[3].base_stat}</div>
+            <div>S.Def: &nbsp;{pokemonData.stats[4].base_stat}</div>
+            <div>Spd: &emsp;{pokemonData.stats[5].base_stat}</div>
           </div>
 
           {/* Returns to home page */}
