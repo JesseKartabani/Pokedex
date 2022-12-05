@@ -32,8 +32,8 @@
   padding: 15px;
   background-color: aliceblue;
   border-style: solid;
-  border-color: #3c5aa6;
-  box-shadow: -3px 3px #3c5aa6, -2px 2px #3c5aa6, -1px 1px #3c5aa6;
+  border-color: black;
+  box-shadow: -3px 3px black, -2px 2px black, -1px 1px black;
 }
 
 .circularProgress {
@@ -48,7 +48,7 @@
   font-size: 1.5rem;
   color: black;
   border-style: solid;
-  border-color: #3c5aa6;
+  border-color: black;
   background-color: aliceblue;
   margin-top: 50px;
   margin-bottom: 50px;
