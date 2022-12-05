@@ -83,7 +83,7 @@ function PokedexGrid() {
             />
 
             {/* Search bar */}
-            <div className="searchContainer animate__animated animate__fadeInRight">
+            <div className="searchContainer animate__animated animate__fadeInRight animate__faster">
               <SearchIcon className="searchIcon" fontSize="large" />
               <TextField
                 InputProps={{
