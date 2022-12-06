@@ -11,8 +11,8 @@
 
 .pokemonName {
   color: white;
-  font-size: 4rem;
-  margin-bottom: -10px;
+  font-size: 4.5rem;
+  margin-bottom: -5px;
   font-weight: bolder;
 }
 
@@ -23,21 +23,23 @@
 
 .infoHeading {
   color: white;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bolder;
   margin-bottom: 5px;
   margin-top: -10px;
 }
 
 .pokemonImage {
-  width: 300px;
-  height: 300px;
+  min-width: 15%;
+  height: auto;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .pokemonInfo {
   display: flex;
   flex-direction: row;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 20px;
   background-color: aliceblue;
   border-style: solid;
@@ -54,7 +56,7 @@
 
 .pokedexLink {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: black;
   border-style: solid;
   border-color: black;
@@ -76,4 +78,22 @@
 .types {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .pokemonInfo {
+    font-size: 1em;
+  }
+
+  .pokedexLink {
+    font-size: 1em;
+  }
+
+  .infoHeading {
+    font-size: 2em;
+  }
+
+  .pokemonName {
+    font-size: 3em;
+  }
 }
