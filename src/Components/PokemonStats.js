@@ -45,7 +45,7 @@ function PokemonStats() {
           </h1>
 
           <img
-            className="pokemonImage"
+            className="pokemonImage animate__animated animate__fadeIn"
             src={pokemonData.sprites.front_default}
             alt="Pokemon"
           />
@@ -89,7 +89,10 @@ function PokemonStats() {
           </div>
 
           {/* Returns to home page */}
-          <Link className="pokedexLink" to={"/"}>
+          <Link
+            className="pokedexLink animate__animated animate__fadeIn"
+            to={"/"}
+          >
             BACK TO POKEDEX
           </Link>
         </div>
