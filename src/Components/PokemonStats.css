@@ -11,7 +11,7 @@
 
 .pokemonName {
   color: white;
-  font-size: 4.2rem;
+  font-size: 4rem;
   margin-bottom: -10px;
   font-weight: bolder;
 }
@@ -22,7 +22,7 @@
 
 .infoHeading {
   color: white;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: bolder;
   margin-bottom: 5px;
   margin-top: -10px;
@@ -34,8 +34,10 @@
 }
 
 .pokemonInfo {
-  font-size: 2rem;
-  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.5rem;
+  padding: 20px;
   background-color: aliceblue;
   border-style: solid;
   border-color: black;
@@ -68,4 +70,9 @@
 
 .pokedexLink:active {
   background-color: gray;
+}
+
+.types {
+  padding-left: 30px;
+  padding-right: 30px;
 }

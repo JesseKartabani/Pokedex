@@ -56,26 +56,36 @@ function PokemonStats() {
 
           <div className="pokemonInfo animate__animated animate__fadeInLeft">
             {/* Weight is in hectograms and height is in decimeters */}
-            <div className="subHeading">Height: </div>
-            <div>{pokemonData.height / 10}m</div>
-            <br />
+            <div>
+              <div className="subHeading">Height</div>
+              <div>{pokemonData.height / 10}m</div>
+              <br />
 
-            <div className="subHeading">Weight:</div>
-            <div>{pokemonData.weight / 10}m</div>
-            <br />
+              <div className="subHeading">Weight</div>
+              <div>{pokemonData.weight / 10}m</div>
+              <br />
+            </div>
 
-            <div className="subHeading">Types:</div>
-            <div>{capitalizeFirstLetter(pokemonData.types[0]?.type.name)}</div>
-            <div>{capitalizeFirstLetter(pokemonData.types[1]?.type.name)}</div>
-            <br />
+            <div className="types">
+              <div className="subHeading">Types</div>
+              <div>
+                {capitalizeFirstLetter(pokemonData.types[0]?.type.name)}
+              </div>
+              <div>
+                {capitalizeFirstLetter(pokemonData.types[1]?.type.name)}
+              </div>
+              <br />
+            </div>
 
-            <div className="subHeading">Stats:</div>
-            <div>Hp: &emsp; {pokemonData.stats[0].base_stat}</div>
-            <div>Atk: &emsp;{pokemonData.stats[1].base_stat}</div>
-            <div>Def: &emsp;{pokemonData.stats[2].base_stat}</div>
-            <div>S.Atk: &nbsp;{pokemonData.stats[3].base_stat}</div>
-            <div>S.Def: &nbsp;{pokemonData.stats[4].base_stat}</div>
-            <div>Spd: &emsp;{pokemonData.stats[5].base_stat}</div>
+            <div>
+              <div className="subHeading">Stats</div>
+              <div>Hp: {pokemonData.stats[0].base_stat}</div>
+              <div>Atk: {pokemonData.stats[1].base_stat}</div>
+              <div>Def: {pokemonData.stats[2].base_stat}</div>
+              <div>S.Atk: {pokemonData.stats[3].base_stat}</div>
+              <div>S.Def: {pokemonData.stats[4].base_stat}</div>
+              <div>Spd: {pokemonData.stats[5].base_stat}</div>
+            </div>
           </div>
 
           {/* Returns to home page */}
