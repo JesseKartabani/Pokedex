@@ -62,7 +62,7 @@ function PokemonStats() {
               <br />
 
               <div className="subHeading">Weight</div>
-              <div>{pokemonData.weight / 10}m</div>
+              <div>{pokemonData.weight / 10}kg</div>
               <br />
             </div>
 
